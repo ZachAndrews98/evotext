@@ -3,10 +3,10 @@ import random
 import time
 import sys
 
-possibleCharacters = string.ascii_lowercase + string.digits + string.ascii_uppercase + ' .,!?;:/'
+possibleCharacters = string.ascii_lowercase + string.digits + string.ascii_uppercase + ' .,!?;:/_'
 
-if len(sys.argv) == 2:
-    target = sys.argv[1]
+if len(sys.argv) >= 2:
+    target = ' '.join(sys.argv[1:])
 else:
     print("Please enter a target word")
     sys.exit()
