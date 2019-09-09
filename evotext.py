@@ -5,11 +5,13 @@ import sys
 
 possibleCharacters = string.ascii_lowercase + string.digits + string.ascii_uppercase + ' .,!?;:/_'
 
-if len(sys.argv) >= 2:
-    target = ' '.join(sys.argv[1:])
-else:
-    print("Please enter a target word")
-    sys.exit()
+# if len(sys.argv) >= 2:
+#     target = ' '.join(sys.argv[1:])
+# else:
+#     print("Please enter a target word")
+#     sys.exit()
+
+target = str(input("Enter a word: "))
 
 attemptThis = ''.join(random.choice(possibleCharacters) for i in range(len(target)))
 attemptNext = ''
