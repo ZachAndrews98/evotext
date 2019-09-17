@@ -1,5 +1,5 @@
-FROM python:3.7-alpine
+FROM alpine
 
-ADD evotext.py /
-
-CMD python3 evotext.py
+RUN set -ex && echo "Installing packages..." && apk update \
+    && apk add --no-cache bash python3 \
+    && rm -rf /var/cache/apk/* \
